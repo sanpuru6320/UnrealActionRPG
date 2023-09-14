@@ -1,8 +1,8 @@
 # UnrealActionRPG
 
-C++ & Blueprintsで実装
-破壊可能オブジェクト
-敵
+## C++ & Blueprintsで実装
+### 破壊可能オブジェクト
+### 敵
 武器を持った敵
 武器を持たない敵
 片手用武器
@@ -11,8 +11,8 @@ C++ & Blueprintsで実装
 HP、スタミナ、Soul(敵死亡時にドロップ。カウントのみ)
 
 ## Edittorでの実装
-Animation Bluepritsでステートを元にアニメーション管理(攻撃,死亡,装備,ヒットのリアクション)
-Animation Montageでアニメーションの設定,効果音,Motion Warpping,コリジョンのオンオフ,エフェクトなどの実装
+### Animation Bluepritsでステートを元にアニメーション管理(攻撃,死亡,装備,ヒットのリアクション)
+### Animation Montageでアニメーションの設定,効果音,Motion Warpping,コリジョンのオンオフ,エフェクトなどの実装
 BluePrints
 
 Enhanced Input
