@@ -10,9 +10,9 @@ C++ & Blueprintsで実装
 HP、スタミナ、Soul(敵死亡時にドロップ。カウントのみ)
 
 ## Edittorでの実装
-Animation Montageでアニメーション実装(攻撃,死亡,装備,ヒットのリアクション)
+Animation Bluepritsでステートを元にアニメーション管理(攻撃,死亡,装備,ヒットのリアクション)
+Animation Montageでアニメーションの設定,効果音,Motion Warppingなどの実装
 BluePrints
-State(Animation Blueprints)
 Enhanced Input
 Niagaraシステム
 Motion Warping 
@@ -23,10 +23,11 @@ Soulバー
 IK Rig(ダウンロードしたアニメーションをキャラクターに適用)
 Control Rig(段差に応じて足の接地面を調整)
 スケルトンの調整
+アニメーションの調整
 ## スクリプトでの実装
 武器の当たり判定
 敵のAI
-死亡後攻撃停止
+プレイヤー死亡後攻撃停止
 アイテムの取得
 State(攻撃,,交戦,追跡,巡回)
 
