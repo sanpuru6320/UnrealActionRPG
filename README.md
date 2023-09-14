@@ -35,3 +35,6 @@
 ## その他
 * AnimationはMixamoからダウンロードして使用
 * 効果音はフリー素材を使用
+
+## 参照
+https://www.udemy.com/course/unreal-engine-5-the-ultimate-game-developer-course/
