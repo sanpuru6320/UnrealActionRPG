@@ -17,6 +17,8 @@
 #include "HUD/SlashOverlay.h"
 #include "Items/Soul.h"
 #include "Items/Treasure.h"
+#include "TimerManager.h"
+#include "GameFramework/PlayerController.h"
 
 ASlashCharacter::ASlashCharacter()
 {
@@ -296,6 +298,20 @@ void ASlashCharacter::Die_Implementation()
 
 	ActionState = EActionState::EAS_Dead;
 	DisableMeshCollision();
+
+	const float Interval = 3.f;
+	const bool Loop = false;
+	const float FirstDelay = 3.f;
+	FTimerHandle UniqueHandle;
+
+	FTimerDelegate TimerDelegate;
+	TimerDelegate.BindLambda([&]
+	{
+		APlayerController* PlayerController = Cast<APlayerController>(GetController());
+		PlayerController->RestartLevel();
+	});
+	GetWorldTimerManager().SetTimer( UniqueHandle, TimerDelegate, Interval, Loop, FirstDelay );
+
 }
 
 bool ASlashCharacter::HasEnoughStamina()

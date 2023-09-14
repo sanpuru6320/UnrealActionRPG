@@ -17,7 +17,7 @@ class SLASH_API AWeapon : public AItem
 public:
 	AWeapon();
 	void Equip(USceneComponent* InParent, FName InSocketName, AActor* NewOwner, APawn* NewInstigator);
-	void DeactivateEmbers();
+	void DeactivateEmbers();//エフェクト無効化
 	void DisableSphereCollision();
 	void PlayEquipSound();
 	void AttachMeshToSocket(USceneComponent* InParent, const FName& InSocketName);
@@ -52,10 +52,10 @@ private:
 	UBoxComponent* WeaponBox;
 
 	UPROPERTY(VisibleAnywhere)
-	USceneComponent* BoxTraceStart;
+	USceneComponent* BoxTraceStart;//武器の判定の末端
 
 	UPROPERTY(VisibleAnywhere)
-	USceneComponent* BoxTraceEnd;
+	USceneComponent* BoxTraceEnd;//武器の判定の先端
 
 	UPROPERTY(EditAnywhere, Category = "Weapon Properties")
 	float Damage = 20.f;

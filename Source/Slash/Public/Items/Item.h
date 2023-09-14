@@ -28,10 +28,10 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sine Parameters")
-	float Amplitude = 0.25f;
+	float Amplitude = 0.25f;//オブジェクトの振れ幅
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sine Parameters")
-	float TimeConstant = 5.f;
+	float TimeConstant = 5.f;//オブジェクトの振れる周期
 
 	UFUNCTION(BlueprintPure)
 	float TransformedSin();
