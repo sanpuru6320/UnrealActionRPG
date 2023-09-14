@@ -32,6 +32,8 @@
 * アイテムの取得
 * State(攻撃,,交戦,追跡,巡回)
 
+https://youtu.be/74V04Fq97qM
+
 ## その他
 * AnimationはMixamoからダウンロードして使用
 * 効果音はフリー素材を使用
