@@ -36,8 +36,11 @@
 https://youtu.be/74V04Fq97qM
 
 ## その他
-* AnimationはMixamoからダウンロードして使用
+* AnimationはMixamoからダウンロードしたものと、フリーのキャラクターアセットから使用。
+* 3DモデルはEpic Gameのマーケットプレイスからダウンロード
 * 効果音はフリー素材を使用
+* ダウンロードした各素材を含むと容量が１０G以上になるためGithubにはアップロードしていません。ですので、ここにアップロードしたものだけでは不足しています。
+
 
 ## 参照
 https://www.udemy.com/course/unreal-engine-5-the-ultimate-game-developer-course/
