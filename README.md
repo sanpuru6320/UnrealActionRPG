@@ -15,7 +15,8 @@ Animation Montageでアニメーションの設定,効果音,Motion Warppingな�
 BluePrints
 Enhanced Input
 Niagaraシステム
-Motion Warping 
+Motion Warping
+Blend Pose
 UI
 Healthバー
 Staminaバー
