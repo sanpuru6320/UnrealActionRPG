@@ -9,11 +9,10 @@
 * ジャンプ
 * HP、スタミナ、Soul(敵死亡時にドロップ。カウントのみ)
 
-* Edittorでの実装
+## Edittorでの実装
 * Animation Bluepritsでステートを元にアニメーション管理(攻撃,死亡,装備,ヒットのリアクション)
 * Animation Montageでアニメーションの設定,効果音,Motion Warpping,コリジョンのオンオフ,エフェクトなどの実装
 * BluePrints
-
 * Enhanced Input
 * Niagaraシステム
 * Motion Warping
@@ -26,7 +25,7 @@
 * Control Rig(段差に応じて足の接地面を調整)
 * スケルトンの調整
 * アニメーションの調整
-* スクリプトでの実装
+## スクリプトでの実装
 * 武器の当たり判定
 * 敵のAI
 * プレイヤー死亡後攻撃停止
