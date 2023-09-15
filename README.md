@@ -9,7 +9,7 @@
 * ジャンプ
 * HP、スタミナ、Soul(敵死亡時にドロップ。カウントのみ)
 
-## Edittorでの実装
+## Editorでの実装
 * Animation Bluepritsでステートを元にアニメーション管理(攻撃,死亡,装備,ヒットのリアクション)
 * Animation Montageでアニメーションの設定,効果音,Motion Warpping,コリジョンのオンオフ,エフェクトなどの実装
 * BluePrints
