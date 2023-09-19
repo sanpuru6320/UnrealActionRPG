@@ -8,7 +8,7 @@
 * HP、スタミナ、Soul(敵死亡時にドロップ。カウントのみ)
 
 ## Editorでの実装
-* Animation Bluepritsでステートを元にアニメーション管理　(攻撃,死亡,装備,ヒットのリアクション)
+* Animation Blueprintsでステートを元にアニメーション管理　(攻撃,死亡,装備,ヒットのリアクション)
 * Animation Montageでアニメーションの設定,効果音,Motion Warpping,コリジョンのオンオフ,エフェクトなどの実装
 * Enhanced Input　(キャラクターの各入力)
 * Niagaraシステム　(エフェクトなど)
