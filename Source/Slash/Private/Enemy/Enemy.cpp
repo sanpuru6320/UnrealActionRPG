@@ -8,7 +8,7 @@
 #include "Items/Weapons/Weapon.h"
 #include "Items/Soul.h"
 
-AEnemy::AEnemy()
+AEnemy::AEnemy()//BPクラスのデフォルト設定
 {
  	PrimaryActorTick.bCanEverTick = true;
 
@@ -26,6 +26,7 @@ AEnemy::AEnemy()
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
+	//探知範囲の設定
 	PawnSens = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensing"));
 	PawnSens->SightRadius = 4000.f;
 	PawnSens->SetPeripheralVisionAngle(45.f);
@@ -166,7 +167,7 @@ void AEnemy::InitializeEnemy()
 	SpawnDefaultWeapon();
 }
 
-void AEnemy::CheckPatrolTarget()
+void AEnemy::CheckPatrolTarget()//設置した次のパトロールポイントを選択
 {
 	if (InTargetRange(PatrolTarget, PatrolRadius))
 	{
@@ -178,18 +179,18 @@ void AEnemy::CheckPatrolTarget()
 
 void AEnemy::CheckCombatTarget()
 {
-	if (IsOutsideCombatRadius())
+	if (IsOutsideCombatRadius())//戦闘範囲外
 	{
 		ClearAttackTimer();
 		LoseInterest();
 		if (!IsEngaged()) StartPatrolling();
 	}
-	else if (IsOutsideAttackRadius() && !IsChasing())
+	else if (IsOutsideAttackRadius() && !IsChasing())//戦闘範囲内 & 攻撃範囲外
 	{
 		ClearAttackTimer();
 		if (!IsEngaged()) ChaseTarget();
 	}
-	else if (CanAttack())
+	else if (CanAttack()) //攻撃範囲内
 	{
 		StartAttackTimer();
 	}
@@ -335,7 +336,7 @@ void AEnemy::SpawnDefaultWeapon()
 	}
 }
 
-void AEnemy::PawnSeen(APawn* SeenPawn)
+void AEnemy::PawnSeen(APawn* SeenPawn)//敵対対象か判定
 {
 	const bool bShouldChaseTarget =
 		EnemyState != EEnemyState::EES_Dead &&

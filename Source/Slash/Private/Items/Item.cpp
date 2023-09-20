@@ -9,8 +9,7 @@
 #include "NiagaraFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
 
-// Sets default values
-AItem::AItem()
+AItem::AItem()//BPクラスのデフォルト設定
 {
 	PrimaryActorTick.bCanEverTick = true;
 

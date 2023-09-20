@@ -32,7 +32,7 @@ protected:
 private:
 
 	UPROPERTY(EditAnywhere, Category = "Breakable Properties")
-	TArray<TSubclassOf<class ATreasure>> TreasureClasses;//TSubclassOf:BPのプルダウンでTreasureに限定
+	TArray<TSubclassOf<class ATreasure>> TreasureClasses;//TSubclassOf:BPのプルダウンでTreasureクラスに限定
 
 	bool bBroken = false;
 };

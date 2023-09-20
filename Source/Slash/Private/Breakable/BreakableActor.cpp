@@ -6,7 +6,7 @@
 #include "Items/Treasure.h"
 #include "Components/CapsuleComponent.h"
 
-ABreakableActor::ABreakableActor()
+ABreakableActor::ABreakableActor()//BPクラスのデフォルト設定
 {
 	PrimaryActorTick.bCanEverTick = false;
 
@@ -46,7 +46,7 @@ void ABreakableActor::GetHit_Implementation(const FVector& ImpactPoint, AActor* 
 		FVector Location = GetActorLocation();
 		Location.Z += 75.f;
 
-		const int32 Selection = FMath::RandRange(0, TreasureClasses.Num() - 1);
-		World->SpawnActor<ATreasure>(TreasureClasses[Selection], Location, GetActorRotation());
+		const int32 Selection = FMath::RandRange(0, TreasureClasses.Num() - 1);//TreasureClassesからランダムに選択
+		World->SpawnActor<ATreasure>(TreasureClasses[Selection], Location, GetActorRotation());//Treasureをスポーン
 	}
 }

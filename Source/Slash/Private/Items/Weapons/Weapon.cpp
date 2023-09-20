@@ -10,7 +10,7 @@
 #include "Interfaces/HitInterface.h"
 #include "NiagaraComponent.h"
 
-AWeapon::AWeapon()
+AWeapon::AWeapon()//BPクラスのデフォルト設定
 {
 	WeaponBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Weapon Box"));
 	WeaponBox->SetupAttachment(GetRootComponent());

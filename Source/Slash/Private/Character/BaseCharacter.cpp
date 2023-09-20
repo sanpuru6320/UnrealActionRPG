@@ -8,7 +8,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Kismet/GameplayStatics.h"
 
-ABaseCharacter::ABaseCharacter()
+ABaseCharacter::ABaseCharacter()//BPクラスのデフォルト設定
 {
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -58,7 +58,7 @@ void ABaseCharacter::PlayHitReactMontage(const FName& SectionName)
 	}
 }
 
-void ABaseCharacter::DirectionalHitReact(const FVector& ImpactPoint)
+void ABaseCharacter::DirectionalHitReact(const FVector& ImpactPoint)//ヒット時の方向によって再生アニメーションを変化
 {
 	const FVector Forward = GetActorForwardVector();
 	// Lower Impact Point to the Enemy's Actor Location Z

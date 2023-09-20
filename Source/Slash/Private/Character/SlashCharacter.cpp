@@ -20,7 +20,7 @@
 #include "TimerManager.h"
 #include "GameFramework/PlayerController.h"
 
-ASlashCharacter::ASlashCharacter()
+ASlashCharacter::ASlashCharacter()//BPクラスのデフォルト設定
 {
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -124,7 +124,7 @@ void ASlashCharacter::BeginPlay()
 		}
 	}
 
-	Tags.Add(FName("EngageableTarget"));
+	Tags.Add(FName("EngageableTarget"));//敵対対象に追加
 	InitializeSlashOverlay();
 	
 }
@@ -168,9 +168,9 @@ void ASlashCharacter::Jump()
 void ASlashCharacter::EKeyPressed()
 {
 	AWeapon* OverlappingWeapon = Cast<AWeapon>(OverlappingItem);
-	if (OverlappingWeapon)
+	if (OverlappingWeapon)//武器を取得
 	{
-		if (EquippedWeapon)
+		if (EquippedWeapon)//武器を破棄し新たに武器を取得
 		{
 			EquippedWeapon->Destroy();
 		}
@@ -301,14 +301,14 @@ void ASlashCharacter::Die_Implementation()
 
 	const float Interval = 3.f;
 	const bool Loop = false;
-	const float FirstDelay = 3.f;
+	const float FirstDelay = 3.f;//死亡後の表示時間
 	FTimerHandle UniqueHandle;
 
 	FTimerDelegate TimerDelegate;
 	TimerDelegate.BindLambda([&]
 	{
 		APlayerController* PlayerController = Cast<APlayerController>(GetController());
-		PlayerController->RestartLevel();
+		PlayerController->RestartLevel();//リスタート
 	});
 	GetWorldTimerManager().SetTimer( UniqueHandle, TimerDelegate, Interval, Loop, FirstDelay );
 

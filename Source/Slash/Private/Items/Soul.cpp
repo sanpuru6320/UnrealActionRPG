@@ -21,6 +21,7 @@ void ASoul::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//スポーン位置から一定の位置まで落下
 	const FVector Start = GetActorLocation();
 	const FVector End = Start - FVector(0.f, 0.f, 2000.f);
 
