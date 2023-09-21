@@ -17,6 +17,7 @@
 * Enhanced Input　(キャラクターの各入力)
 * Niagaraシステム　(エフェクトなど)
 * Motion Warping　(攻撃時の方向転換)
+* Root Motionの設定(アニメーション時のコリジョンの調整)
 * Blend Pose　(移動スピードなどの数値によってアニメーションの変化)
 * UI　(HP、スタミナ、Soul)
 * IK Rig　(Mixmaoからダウンロードしたアニメーションを3Dアセットのキャラクターに適用)
